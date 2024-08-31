@@ -1,3 +1,4 @@
+import { BsThreeDots } from "react-icons/bs";
 function HomePage() {
   return (
     <main className={khand.className}>
@@ -24,13 +25,34 @@ function HomePage() {
              Hire Me
           </span>
         </div>
+        <div id='center' className=''>
+          <Image
+           src="/assets/images/eloge-removebg-preview 2eloge.png"
+           alt='home photo'
+           width={527}
+           height={663}
+         //   layout="responsive"
+           objectFit="cover"
+           priority
+           className="flex justify-center top-0 absolute"
+          />
+        </div>
+         <div id='right' className='flex float-right'>
+            <span>
+            <BsThreeDots  className="text-white text-9xl right-20 "/>
+
+            </span>
+
+            </div>
       </div>
     </main>
   );
 }
 
 export default HomePage;
+
 import { Khand } from 'next/font/google';
+import Image from 'next/image';
 
 const khand = Khand({
   subsets: ['latin'],
