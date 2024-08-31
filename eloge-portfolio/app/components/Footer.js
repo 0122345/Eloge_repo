@@ -5,9 +5,9 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='w-full min-h-screen font-khand text-5xl text-white bg-home-gray px-8 md:px16 py-16'>
+        <div className='w-full min-h-screen font-khand text-5xl text-white bg-home-gray '>
             <h1>Contact me</h1>
-            <div className='flex flex-row'>
+            <div className='flex flex-row px-8 md:px16 py-16'>
                 <div className='flex flex-col gap-8 w-1/2 p-8'>
                     {footerDetails.map((item, i) => (
                         <div key={i} className='flex gap-4 items-center w-fit text-2xl'>
@@ -30,6 +30,9 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
+            <marquee behavior="scroll" direction="right" className='w-full py-8 bg-home-yellow '>
+                Copyright    2024.All rights reserved
+            </marquee>
         </div>
     )
 }
