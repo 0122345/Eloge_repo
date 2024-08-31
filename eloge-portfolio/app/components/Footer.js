@@ -6,7 +6,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className='w-full min-h-screen font-khand text-5xl text-white bg-home-gray '>
-            <h1>Contact me</h1>
+             <h1 className='mx-8 md:mx-16'>Contact me</h1>
             <div className='flex flex-row px-8 md:px16 py-16'>
                 <div className='flex flex-col gap-8 w-1/2 p-8'>
                     {footerDetails.map((item, i) => (
