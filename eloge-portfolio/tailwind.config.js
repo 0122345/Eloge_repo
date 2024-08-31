@@ -10,7 +10,10 @@ module.exports = {
        colors: {
         'home-gray': '#3F3F3F',
         'home-yellow': '#E9B137'
-       }
+       },
+       fontFamily: {
+        khand: ['Khand', 'sans-serif'],
+      },
     },
   },
   plugins: [],
