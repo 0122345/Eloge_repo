@@ -2,8 +2,8 @@ import { BsThreeDots } from "react-icons/bs";
 
 function HomePage() {
   return (
-    <main className={khand.className}>
-      <div className="bg-gradient-to-r from-home-gray from-50% to-home-yellow to-50% w-dvw h-dvh overflow-hidden">
+    <main className='font-khand w-full'>
+      <div className="bg-gradient-to-r from-home-gray from-50% to-home-yellow to-50% w-dvw h-dvh">
         <div id="left" className="flex flex-col text-white justify-start w-[50%]">
           <span className="w-[60%] h-[65%] mx-20 space-y-2 my-32">
             <p className="text-4xl font-light">
@@ -50,12 +50,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
-
-import { Khand } from 'next/font/google';
-import Image from 'next/image';
-
-const khand = Khand({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-});
+import Image from "next/image";
