@@ -7,8 +7,8 @@ const Footer = () => {
     return (
         <div className='w-full min-h-screen font-khand text-5xl text-white bg-home-gray '>
              <h1 className='mx-8 md:mx-16'>Contact me</h1>
-            <div className='flex flex-row px-8 md:px16 py-16'>
-                <div className='flex flex-col gap-8 w-1/2 p-8'>
+            <div className='flex flex-col md:flex-row px-8 md:px16 py-16'>
+                <div className='flex flex-col gap-8 w-full md:w-1/2 p-8'>
                     {footerDetails.map((item, i) => (
                         <div key={i} className='flex gap-4 items-center w-fit text-2xl'>
                             <div className='size-8 relative'>
@@ -18,7 +18,7 @@ const Footer = () => {
                         </div>
                     ))}
                 </div>
-                <div className='p-8 w-1/2'>
+                <div className='p-8 w-full md:w-1/2'>
                     <form action="" className='w-full flex flex-col gap-8 no-underline'>
                         <div className='w-full flex gap-8'>
                             <input type="text" className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' placeholder='Your name...' />
