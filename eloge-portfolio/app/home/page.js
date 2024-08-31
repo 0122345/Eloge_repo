@@ -20,7 +20,9 @@ function HomePage() {
           </span>
 
           {/* button */}
-          <span></span>
+          <span className=''>
+             Hire Me
+          </span>
         </div>
       </div>
     </main>
