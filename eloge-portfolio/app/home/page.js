@@ -1,6 +1,6 @@
 function HomePage() {
   return (
-    <main className={khand.className}>
+    <main className='font-khand w-full'>
       <div className="bg-gradient-to-r from-home-gray from-50% to-home-yellow to-50% w-dvw h-dvh">
         <div id="left" className="flex flex-col text-white justify-start w-[50%]">
           <span className="">
