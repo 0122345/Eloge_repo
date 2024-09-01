@@ -1,5 +1,4 @@
 import Image from "next/image";
-import 'lazysizes';
 
 export default function About() {
   return (
@@ -16,7 +15,7 @@ export default function About() {
               height={450}
               objectFit="contain"
               priority
-              className="lazy-loading"
+              className="lazyload"
             />
           </span>
         </div>

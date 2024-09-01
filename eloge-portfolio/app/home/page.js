@@ -40,7 +40,7 @@ export default function HomePage() {
               layout="responsive"
               objectFit="contain"
               priority 
-              className="mx-auto lg:absolute lg:top-[-85px] lg:right-[145px]"
+              className="lazyload mx-auto lg:absolute lg:top-[-85px] lg:right-[145px]"
             />
           </div>
         </div>

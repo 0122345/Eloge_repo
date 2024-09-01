@@ -41,3 +41,28 @@
     font-weight: 300;
     font-style: normal;
 }
+
+/* changing scrollbar*/
+ ::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E1E1E; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FFC700;  
+    border-radius: 10px;
+    border: 4px solid #1E1E1E;  
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e6b300;  
+  }
+
+  * {
+    scrollbar-width: thick;
+    scrollbar-color: #FFC700 #1E1E1E;  
+  }
+
