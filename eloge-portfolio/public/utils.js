@@ -63,3 +63,36 @@ export const projects = [
         img:'/projects/Screenshot 2024-07-20 214632 1.png'
     }
 ]
+
+export const frames = [
+    {
+        title: 'App Design',
+        description: 'This is a frame 1 description.',
+        img:'/projects/Frame 8frame3.png'
+    },
+    {
+        title: 'Branding',
+        description: 'This is a frame 1 description.',
+        img:'/projects/Frame 9frame2.png'
+    },
+    {
+        title: 'Logo Design',
+        description: 'This is a frame 1 description.',
+        img:'/projects/Frame 10frame1.png'
+    },
+    {
+        title: 'UI/UX Design',
+        description: 'This is a frame 1 description.',
+        img:'/projects/Frame 11frame5.png'
+    },
+    {
+        title: 'Web Design',
+        description: 'This is a frame 1 description.',
+        img:'/projects/Frame 9frame4.png'
+    },
+    {
+        title: 'System Design',
+        description: 'This is a frame 1 description.',
+        img:'/projects/Frame 12frame6.png'
+    },
+]

@@ -35,7 +35,6 @@ export default function About() {
       variants={containerVariants}
       className="flex flex-col lg:flex-row min-h-screen w-full bg-[#393939] font-khand p-4 lg:p-8 overflow-x-hidden"
     >
-
       <motion.div variants={itemVariants} id="container" className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0">
         <div className="w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>
