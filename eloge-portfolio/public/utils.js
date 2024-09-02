@@ -94,5 +94,5 @@ export const frames = [
         title: 'System Design',
         description: 'This is a frame 1 description.',
         img:'/projects/Frame 12frame6.png'
-    },
+    }
 ]
