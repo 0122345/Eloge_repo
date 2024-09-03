@@ -56,28 +56,28 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[50%] flex flex-col lg:ml-[10vw] mt-8 lg:mt-[10vh]">
+      <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8 lg:mt-[10vh]">
         <div className="flex flex-col my-5">
           <h1 className="text-2xl lg:text-3xl text-white font-semibold animate">About Me</h1>
           <motion.hr 
             variants={itemVariants} 
             className="w-28 lg:w-36 border-t-4 border-home-yellow my-3 lg:my-5 animate" 
           />
-          <p className="text-lg lg:text-xl text-white w-full lg:max-w-[500px] pb-6 lg:pb-11 animate">
+          <p className="text-lg lg:text-2xl text-white w-full lg:max-w-[500px] pb-6 lg:pb-11 animate">
             A passionate designer with a love for crafting
             meaningful and visually stunning experiences.
             With a background, e.g. graphic design, digital
             Design etc , I thrive on bringing creativity to
             life through thoughtful design solutions.
           </p>
-          <p className="text-lg lg:text-xl text-white w-full lg:max-w-[450px] animate">
+          <p className="text-lg lg:text-2xl text-white w-full lg:max-w-[450px] animate">
             Whether it's creating captivating visuals or
             designing different user experiences, I'm dedicated
             to exceeding expectations and making a lasting impact.
             Let's collaborate and bring your vision to life.
           </p>
 
-          <div className="flex flex-col sm:flex-row my-12 lg:my-24 pt-8 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
+          <div className="flex flex-col sm:flex-row my-12 lg:my-24 pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
             <span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
               Hire Me
             </span>
