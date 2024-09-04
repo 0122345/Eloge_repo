@@ -61,7 +61,7 @@ const Footer = () => {
             <div className='flex flex-col md:flex-row px-8 md:px-16 py-16'>
                 <motion.div className='flex flex-col gap-8 w-full md:w-1/2 p-8' variants={containerVariants}>
                     {footerDetails.map((item, i) => (
-                        <motion.div key={i} className='flex gap-4 items-center w-fit text-2xl' variants={itemVariants}>
+                        <motion.div key={i} className='flex gap-4 items-center w-fit lg:text-2xl text-xl' variants={itemVariants}>
                             <div className='size-8 relative'>
                                 <Image src={item.logo} alt={item.title} className='object-contain' fill />
                             </div>

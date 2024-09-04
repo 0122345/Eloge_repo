@@ -56,7 +56,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8 lg:mt-[10vh]">
+      <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8">
         <div className="flex flex-col my-5">
           <h1 className="text-2xl lg:text-3xl text-white font-semibold animate">About Me</h1>
           <motion.hr 
@@ -70,7 +70,7 @@ const About = () => {
             Design etc , I thrive on bringing creativity to
             life through thoughtful design solutions.
           </p>
-          <p className="text-lg lg:text-2xl text-white w-full lg:max-w-[450px] animate">
+          <p className="text-lg lg:text-2xl text-white w-full  lg:max-w-[450px] animate">
             Whether it's creating captivating visuals or
             designing different user experiences, I'm dedicated
             to exceeding expectations and making a lasting impact.

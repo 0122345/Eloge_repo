@@ -24,9 +24,9 @@ export default function HomePage() {
             </span>
 
             {/* button */}
-            <span className='mt-6 lg:mt-0 border border-home-yellow border-solid rounded-sm w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-2xl font-medium text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray lg:hover:bg-home-gray lg:hover:text-home-yellow transition-colors duration-300 ease-in-out'>
+            <span className='border border-home-yellow border-solid rounded-sm w-full sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray'>
               Hire Me
-            </span>          
+            </span>         
           </div>
           <div id='center' className='relative w-full lg:w-1/2 mt-8 lg:mt-0'>
             <span className="absolute top-4 right-6 lg:right-16"> 
