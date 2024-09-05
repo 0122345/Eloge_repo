@@ -58,6 +58,7 @@ const Footer = () => {
             variants={containerVariants}
         >
             <motion.h1 variants={itemVariants} className='mx-8 md:mx-16'>Contact me</motion.h1>
+            <hr className="w-[180px] lg:w-[200px] border-t-4 border-home-yellow lg:mx-14 mx-11 animate" />
             <div className='flex flex-col md:flex-row px-8 md:px-16 py-16'>
                 <motion.div className='flex flex-col gap-8 w-full md:w-1/2 p-8' variants={containerVariants}>
                     {footerDetails.map((item, i) => (

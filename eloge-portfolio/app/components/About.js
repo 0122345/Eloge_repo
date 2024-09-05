@@ -37,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen bg-[#393939] font-khand p-4 lg:p-8 flex flex-col lg:flex-row overflow-x-hidden">
+    <div ref={sectionRef} className="w-full min-h-screen bg-home-service font-khand p-4 lg:p-8 flex flex-col lg:flex-row overflow-x-hidden">
       <div className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0 animate">
         <div className="w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>

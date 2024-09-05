@@ -9,7 +9,8 @@ module.exports = {
     extend: {
        colors: {
         'home-gray': '#3F3F3F',
-        'home-yellow': '#E9B137'
+        'home-yellow': '#E9B137',
+        'home-service':'#393939'
        },
        fontFamily: {
         khand: ['Khand', 'sans-serif'],
