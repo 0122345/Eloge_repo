@@ -2,12 +2,30 @@
 import { footerDetails } from '@/public/utils'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from "framer-motion"
+import emailjs from 'emailjs-com'
 
 const Footer = () => {
     const sectionRef = useRef(null);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        description: '',
+        feedback: ''
+    })
+    const [errors, setErrors] = useState({})
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
+    const inputVariants = {
+        valid: { scale: 1, borderColor: '#4CAF50' },
+        invalid: { scale: 1.05, borderColor: '#FF5252' }
+    }
+
+    const errorVariants = {
+        hidden: { opacity: 0, y: -10 },
+        visible: { opacity: 1, y: 0 }
+    }
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -49,6 +67,33 @@ const Footer = () => {
         }
     }
 
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+
+    const validateForm = () => {
+        let tempErrors = {}
+        if (!formData.name.trim()) tempErrors.name = "Name is required"
+        if (!formData.email.trim()) tempErrors.email = "Email is required"
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) tempErrors.email = "Email is invalid"
+        if (!formData.feedback.trim()) tempErrors.feedback = "Feedback is required"
+        setErrors(tempErrors)
+        return Object.keys(tempErrors).length === 0
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+        if (validateForm()) {
+            await new Promise(resolve => setTimeout(resolve, 2000))
+            setFormData({ name: '', email: '', description: '', feedback: '' })
+            setIsSubmitting(false)
+            // Show success message or toast
+        } else {
+            setIsSubmitting(false)
+        }
+    }
+
     return (
         <motion.div
             ref={sectionRef}
@@ -71,14 +116,87 @@ const Footer = () => {
                     ))}
                 </motion.div>
                 <motion.div className='p-8 w-full md:w-1/2' variants={containerVariants}>
-                    <form action="" className='w-full flex flex-col gap-8 no-underline'>
+                    <form onSubmit={handleSubmit} className='w-full flex flex-col gap-8 no-underline'>
                         <motion.div className='w-full flex gap-8' variants={itemVariants}>
-                            <input type="text" className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' placeholder='Your name...' />
-                            <input type="email" className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' placeholder='Your email...' />
+                            <div className="w-full">
+                                <motion.input 
+                                    type="text" 
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' 
+                                    placeholder='Your name...'
+                                    variants={inputVariants}
+                                    animate={errors.name ? 'invalid' : 'valid'}
+                                />
+                                <motion.p 
+                                    variants={errorVariants}
+                                    initial="hidden"
+                                    animate={errors.name ? 'visible' : 'hidden'}
+                                    className="text-red-500 text-sm mt-1"
+                                >
+                                    {errors.name}
+                                </motion.p>
+                            </div>
+                            <div className="w-full">
+                                <motion.input 
+                                    type="email" 
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' 
+                                    placeholder='Your email...'
+                                    variants={inputVariants}
+                                    animate={errors.email ? 'invalid' : 'valid'}
+                                />
+                                <motion.p 
+                                    variants={errorVariants}
+                                    initial="hidden"
+                                    animate={errors.email ? 'visible' : 'hidden'}
+                                    className="text-red-500 text-sm mt-1"
+                                >
+                                    {errors.email}
+                                </motion.p>
+                            </div>
                         </motion.div>
-                        <motion.input variants={itemVariants} type="text" className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' placeholder='Description...' />
-                        <motion.textarea variants={itemVariants} className='outline w-full p-2 bg-transparent min-h-56 text-2xl outline-home-yellow rounded-xl' placeholder='Your feedback...' />
-                        <motion.button variants={itemVariants} className='py-4 bg-home-yellow rounded-xl text-2xl'>Submit now</motion.button>
+                        <motion.input 
+                            variants={itemVariants} 
+                            type="text" 
+                            name="description"
+                            value={formData.description}
+                            onChange={handleChange}
+                            className='outline w-full p-2 bg-transparent h-fit text-2xl outline-home-yellow rounded-xl' 
+                            placeholder='Description...' 
+                        />
+                        <motion.div variants={itemVariants}>
+                            <motion.textarea 
+                                name="feedback"
+                                value={formData.feedback}
+                                onChange={handleChange}
+                                className='outline w-full p-2 bg-transparent min-h-56 text-2xl outline-home-yellow rounded-xl' 
+                                placeholder='Your feedback...'
+                                variants={inputVariants}
+                                animate={errors.feedback ? 'invalid' : 'valid'}
+                            />
+                            <motion.p 
+                                variants={errorVariants}
+                                initial="hidden"
+                                animate={errors.feedback ? 'visible' : 'hidden'}
+                                className="text-red-500 text-sm mt-1"
+                            >
+                                {errors.feedback}
+                            </motion.p>
+                        </motion.div>
+                        <motion.button 
+                            variants={itemVariants} 
+                            type="submit"
+                            className='py-4 bg-home-yellow rounded-xl text-2xl'
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Submitting...' : 'Submit now'}
+                        </motion.button>
                     </form>
                 </motion.div>
             </div>

@@ -225,7 +225,29 @@ export const buttons = [
    },
    {
     id: 4,
-    name: 'Web Design'
+    name: 'Web Design',
+    image : [
+         {
+            title: 'web 1',
+            img: '/projects/Screenshot 2024-07-20 212016 1.png'
+         },
+         {
+            title: 'web 2',
+            img: '/projects/Screenshot 2024-07-20 212143 1.png'
+         },
+         {
+            title: 'web 3',
+            img: '/projects/Screenshot 2024-07-20 212403 1.png'
+         },
+         {
+            title: 'web4',
+            img: '/projects/Screenshot 2024-07-20 212856 1.png'
+         },
+         {
+            title: 'web 5',
+            img:'/projects/Screenshot 2024-07-20 214102 1.png'
+         }       
+    ]
    },
    {
     id: 5,
