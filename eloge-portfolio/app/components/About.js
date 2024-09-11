@@ -37,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen bg-home-service font-khand p-4 lg:p-8 flex flex-col lg:flex-row overflow-x-hidden">
+    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden">
       <div className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0 animate">
         <div className="w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>
@@ -55,22 +55,21 @@ const About = () => {
           </span>
         </div>
       </div>
-
-      <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8">
-        <div className="flex flex-col my-5">
-          <h1 className="text-2xl lg:text-3xl text-white font-semibold animate">About Me</h1>
-          <motion.hr 
-            variants={itemVariants} 
-            className="w-28 lg:w-36 border-t-4 border-home-yellow my-3 lg:my-5 animate" 
-          />
-          <p className="text-lg lg:text-2xl text-white w-full lg:max-w-[500px] pb-6 lg:pb-11 animate">
-            A passionate designer with a love for crafting
-            meaningful and visually stunning experiences.
-            With a background, e.g. graphic design, digital
-            Design etc , I thrive on bringing creativity to
-            life through thoughtful design solutions.
+        <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8">
+          <div className="flex flex-col my-5">
+            <h1 className="text-xl lg:text-2xl text-white font-semibold animate">About Me</h1>
+            <motion.hr 
+              variants={itemVariants} 
+              className="w-24 lg:w-32 border-t-3 border-home-yellow my-2 lg:my-4 animate" 
+            />
+            <p className="text-xl lg:text-2xl  text-white w-full lg:max-w-[400px] pb-4 lg:pb-8 animate">
+              A passionate designer with a love for crafting
+              meaningful and visually stunning experiences.
+              With a background, e.g. graphic design, digital
+              Design etc , I thrive on bringing creativity to
+              life through thoughtful design solutions.
           </p>
-          <p className="text-lg lg:text-2xl text-white w-full  lg:max-w-[450px] animate">
+          <p className="text-xl lg:text-2xl text-white w-full  lg:max-w-[450px] animate">
             Whether it's creating captivating visuals or
             designing different user experiences, I'm dedicated
             to exceeding expectations and making a lasting impact.
