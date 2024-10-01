@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { projects } from '@/public/utils'
 import { buttons } from '@/public/utils'
 import Image from 'next/image'
@@ -59,7 +59,7 @@ const Projects = () => {
                 <Image
                   src={image.img}
                   alt={image.title}
-                  layout="fill"
+                  fill
                   objectFit="cover"
                 />
               </div>
@@ -81,7 +81,7 @@ const Projects = () => {
               <Image 
                 src={item.img || item.image} 
                 alt={item.alt || item.title || 'Project image'} 
-                layout="fill"
+                fill
                 objectFit="cover"
               />
             </div>
