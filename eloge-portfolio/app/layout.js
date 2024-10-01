@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Eloge Next.js App',
-  description: 'Created with Next.js',
+  description: 'Created with Next.js & framer',
 }
 export default function RootLayout({children,}) {
   return (

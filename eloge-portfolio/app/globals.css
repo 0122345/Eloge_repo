@@ -17,12 +17,13 @@
     font-style: normal;
 }
 
+
 /* Semibold */
 @font-face {
-    font-family: 'khand';
-    src: url('../public/fonts/Khand-Semibold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: 'khand';
+  src: url('../public/fonts/Khand-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Bold */
