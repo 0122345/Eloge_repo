@@ -51,7 +51,7 @@ export default function HomePage() {
               Hire Me
               {showTooltip && (
                 <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-2 bg-white text-home-gray rounded-md shadow-lg text-sm tooltip-animation">
-                  <p>📧 elogechris4@gmail.com</p>
+                  <p>📧 elogechris4@gmail.com or elogechris3@gmail.com</p>
                 </div>
               )}
             </span>
