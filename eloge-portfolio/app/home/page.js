@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect, useRef } from 'react';
-import { BsThreeDots } from "react-icons/bs";
 import Image from "next/image";
 
 export default function HomePage() {
@@ -35,7 +34,7 @@ export default function HomePage() {
               <p className="text-home-yellow text-5xl lg:text-6xl font-bold animate">
                 I'M ELOGE CHRIS
               </p>
-              <p className="text-lg lg:text-xl font-light animate">
+              <p className="text-lg lg:text-2xl font-medium animate">
                 Welcome to my creative world, 
                 a passionate designer fueled 
                 by a relentless drive for innovation 
@@ -44,22 +43,19 @@ export default function HomePage() {
               </p>
             </span>
             <span 
-              className='relative border border-home-yellow border-solid rounded-sm w-full sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray animate'
+              className='relative border border-home-yellow border-solid rounded-md w-32 sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-semibold text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray animate'
               onMouseEnter={() => setShowTooltip(true)}
               onMouseLeave={() => setShowTooltip(false)}
             >
               Hire Me
               {showTooltip && (
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-2 bg-white text-home-gray rounded-md shadow-lg text-sm tooltip-animation">
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-2 bg-white text-home-gray rounded-md shadow-lg text-sm tooltip-animation w-full">
                   <p>📧 elogechris4@gmail.com or elogechris3@gmail.com</p>
                 </div>
               )}
             </span>
           </div>
           <div id='center' className='relative w-full lg:w-1/2 mt-8 lg:mt-0 animate'>
-            <span className="absolute top-4 right-6 lg:right-16"> 
-              <BsThreeDots className="text-white text-4xl lg:text-6xl"/>
-            </span>
             <Image
               src="/assets/images/eloge-removebg-preview 2eloge.png"
               alt='home photo'

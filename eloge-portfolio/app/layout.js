@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 function Loader() {
   return (
     <div className="loader-container">
-      <div className="loader-text">Eloge</div>
+      <div className="loader-text">Eloge Chris Portfolio</div>
       <div className="progress-bar">
         <div className="progress"></div>
       </div>

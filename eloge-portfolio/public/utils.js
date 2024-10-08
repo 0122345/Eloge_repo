@@ -1,3 +1,4 @@
+
 export const footerDetails = [
     {
         logo:'/loc.png',
@@ -6,9 +7,10 @@ export const footerDetails = [
     {
         logo:'/message.png',
         title:[
-            'elogechris4@gmail.com',
-            'elogearts3@gmail.com'
-        ]
+            'elogechris4@gmail.com',   
+            'elogearts3@gmail.com',    
+        ],displayAsColumn: true 
+             
     },
     {
         logo:'/phone.png',
@@ -192,11 +194,6 @@ export const buttons = [
     
      ],    
    },
-
-   {
-    id: 2,
-    name: 'Branding'
-   },
    {
     id: 3,
     name: 'App Design',
@@ -229,32 +226,29 @@ export const buttons = [
     image : [
          {
             title: 'web 1',
-            img: '/projects/Screenshot 2024-07-20 212016 1.png'
+            img: '/projects/web1.jpg'
          },
          {
             title: 'web 2',
-            img: '/projects/Screenshot 2024-07-20 212143 1.png'
+            img: '/projects/web2.jpg'
          },
          {
             title: 'web 3',
-            img: '/projects/Screenshot 2024-07-20 212403 1.png'
+            img: '/projects/web3.jpg'
          },
          {
             title: 'web4',
-            img: '/projects/Screenshot 2024-07-20 212856 1.png'
+            img: '/projects/web4.jpg'
          },
          {
-            title: 'web 5',
-            img:'/projects/Screenshot 2024-07-20 214102 1.png'
-         }       
+            title: 'web 6',
+            img:'/projects/web6.jpg'
+         }        
     ]
    },
    {
     id: 5,
     name: 'UI/UX Design'
-   },
-   {
-    id: 6,
-    name: 'System Design'
    }
+   
 ]

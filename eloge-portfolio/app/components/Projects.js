@@ -1,3 +1,4 @@
+
 'use client'
 import { projects } from '@/public/utils'
 import { buttons } from '@/public/utils'
@@ -38,24 +39,24 @@ const Projects = () => {
       <h1 className='font-khand text-5xl text-white mb-1 animate'>Design Samples</h1>
       <hr className="flex justify-start w-[250px] border-t-4 border-home-yellow mt-0 mb-6 mx-auto lg:mx-0 sm:left-2 animate" />
       
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+      <div className="flex lg:gap-[20px] flex-wrap mt-4 w-full h-full justify-center items-center">
         {buttons.map((button, index) => (
           <button
             onClick={() => handleButtonClick(button.id)}
             key={button.id || index}
-            className='p-4 text-sm sm:text-lg h-16 sm:h-20 flex justify-center items-center rounded-sm font-khand text-home-yellow hover:text-white border-2 border-solid border-home-yellow hover:border-white animate'
+            className='p-4 text-lg w-32 lg:h-11 h-20 flex justify-center items-center rounded-md font-khand text-home-yellow hover:text-black border-2 border-solid border-home-yellow hover:border-white animate hover:bg-home-yellow'
             style={{transitionDelay: `${index * 100}ms`}}
           >
             {button.name}
           </button>
         ))}
       </div>
-      {/* Foreground page with images */}
+      
       {selectedImages && (
         <div className="absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 sm:p-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
             {selectedImages.map((image, index) => (
-              <div key={index} className="relative h-40 sm:h-48 w-full animate" style={{transitionDelay: `${index * 100}ms`}}>
+              <div key={index} className="relative h-40 sm:h-44 w-full animate" style={{transitionDelay: `${index * 100}ms`}}>
                 <Image
                   src={image.img}
                   alt={image.title}
@@ -78,7 +79,7 @@ const Projects = () => {
         {(selectedImages || projects).map((item, index) => (
           <div key={item.id || index} className='w-full sm:w-[48%] lg:w-[30%] mb-4 hover animate' style={{transitionDelay: `${index * 100}ms`}}>
             <div className='relative h-64 sm:h-72 rounded-xl overflow-hidden shadow-md'>
-              <Image 
+              <Image
                 src={item.img || item.image} 
                 alt={item.alt || item.title || 'Project image'} 
                 fill

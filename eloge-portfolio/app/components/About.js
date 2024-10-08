@@ -37,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden">
+    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden h-full">
       <div className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0 animate">
         <div className="w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>
@@ -56,13 +56,14 @@ const About = () => {
         </div>
       </div>
         <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8">
-          <div className="flex flex-col my-5">
-            <h1 className="text-xl lg:text-2xl text-white font-semibold animate">About Me</h1>
+          <h1 className="text-xl lg:text-2xl text-white font-semibold animate">About Me</h1>
             <motion.hr 
               variants={itemVariants} 
               className="w-24 lg:w-32 border-t-3 border-home-yellow my-2 lg:my-4 animate" 
             />
-            <p className="text-xl lg:text-2xl  text-white w-full lg:max-w-[400px] pb-4 lg:pb-8 animate">
+            <div className="flex my-5">
+            
+            <p className="text-xl lg:text-3xl  text-white w-full lg:max-w-[400px] pb-4 lg:pb-8 animate">
               A passionate designer with a love for crafting
               meaningful and visually stunning experiences.
               With a background, e.g. graphic design, digital
@@ -74,9 +75,9 @@ const About = () => {
             designing different user experiences, I'm dedicated
             to exceeding expectations and making a lasting impact.
             Let's collaborate and bring your vision to life.
-          </p>
-
-          <div className="flex flex-col sm:flex-row my-12 lg:my-24 pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
+          </p> 
+         </div>
+        <div className="flex flex-col sm:flex-row my-12 lg:my-24 pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
             <span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
               Hire Me
             </span>
@@ -84,7 +85,6 @@ const About = () => {
               Discover All
             </span>
           </div>
-        </div>
       </div>
     </div>
   );
