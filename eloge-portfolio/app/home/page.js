@@ -57,7 +57,7 @@ export default function HomePage() {
           </div>
           <div id='center' className='relative w-full lg:w-1/2 mt-8 lg:mt-0 animate'>
             <Image
-              src="/assets/images/eloge-removebg-preview 2eloge.png"
+              src="/assets/images/elogeimage.png"
               alt='home photo'
               width={400}
               height={450}

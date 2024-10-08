@@ -1,4 +1,3 @@
-
 'use client'
 import { projects } from '@/public/utils'
 import { buttons } from '@/public/utils'
@@ -44,7 +43,7 @@ const Projects = () => {
           <button
             onClick={() => handleButtonClick(button.id)}
             key={button.id || index}
-            className='p-4 text-lg w-32 lg:h-11 h-20 flex justify-center items-center rounded-md font-khand text-home-yellow hover:text-black border-2 border-solid border-home-yellow hover:border-white animate hover:bg-home-yellow'
+            className='p-1 text-lg w-[136px] lg:h-11 h-20 flex justify-center items-center rounded-md font-khand text-home-yellow hover:text-black border-2 border-solid border-home-yellow hover:border-white animate hover:bg-home-yellow'
             style={{transitionDelay: `${index * 100}ms`}}
           >
             {button.name}
@@ -78,7 +77,7 @@ const Projects = () => {
       <div className='w-full mt-8 gap-4 flex flex-wrap justify-center'>
         {(selectedImages || projects).map((item, index) => (
           <div key={item.id || index} className='w-full sm:w-[48%] lg:w-[30%] mb-4 hover animate' style={{transitionDelay: `${index * 100}ms`}}>
-            <div className='relative h-64 sm:h-72 rounded-xl overflow-hidden shadow-md'>
+            <div className='relative h-64 sm:h-72 hover:bg-home-yellow overflow-hidden shadow-md'>
               <Image
                 src={item.img || item.image} 
                 alt={item.alt || item.title || 'Project image'} 

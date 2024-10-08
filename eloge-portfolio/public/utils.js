@@ -165,32 +165,28 @@ export const ui_design = [
 export const buttons = [
    {
      id: 1,
-     name: 'Logo Design',
+     name: 'Graphic Design',
      image : [
         {
             title: 'Logo 1',
-            img:'/projects/logo1.png'
+            img:'/projects/log1.jpg'
         },
         {
             title: 'Logo 2',
-            img:'/projects/logo2.png'
+            img:'/projects/log2.jpg'
         },
         {
             title: 'Logo 3',
-            img:'/projects/logo3.png'
+            img:'/projects/log3.jpg'
         },
         {
             title: 'Logo 4',
-            img:'/projects/logo4.png'
+            img:'/projects/log4.jpg'
         },
         {
             title: 'Logo 5',
-            img:'/projects/logo5.png'
-        },
-        {
-            title: 'logo 6',
-            img:'/projects/logo6.png'
-        }
+            img:'/projects/log5.jpg'
+        } 
     
      ],    
    },
@@ -200,23 +196,27 @@ export const buttons = [
     image : [
         {
             title: 'App 1',
-            img: '/projects/Clothing Store App 1apps.png'
+            img: '/projects/app1.jpg'
         },
         {
             title: 'App 2',
-            img: '/projects/coffee shop App 1apps.png'
+            img: '/projects/app2.jpg'
         },
         {
             title: 'App 3',
-            img: '/projects/app3.png'
+            img: '/projects/app3.jpg'
         },
         {
             title: 'App 4',
-            img: '/projects/app 4.png'
+            img: '/projects/app4.jpg'
         },
         {
             title: 'App 5',
-            img: '/projects/Food Odering App 1apps.png'
+            img: '/projects/app9.jpg'
+        },
+        {
+            title: 'App 6',
+            img: '/projects/app 4.png'
         }
     ]
    },
@@ -248,7 +248,13 @@ export const buttons = [
    },
    {
     id: 5,
-    name: 'UI/UX Design'
-   }
+    name: 'Content Creation',
+    image: [
+        {
+            title: 'Content Creation 1',
+            img: '/projects/content creation.jpg'
+        },
+    ],displayAsColumn: true  
+   } 
    
 ]

@@ -39,12 +39,12 @@ const About = () => {
   return (
     <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden h-full">
       <div className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0 animate">
-        <div className="w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
+        <div className="hidden lg:flex w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>
-        <div id="image-potrait" className="absolute top-[-10px] lg:top-[-20px] left-[10px] lg:left-[20px] w-[200px] lg:w-[250px] z-10 h-[270px] lg:h-[320px] bg-home-yellow border-[8px] lg:border-[12px] border-solid border-white">
+        <div id="image-potrait" className="hidden lg:flex absolute top-[-10px] lg:top-[-20px] left-[10px] lg:left-[20px] w-[200px] lg:w-[250px] z-10 h-[270px] lg:h-[320px] bg-home-yellow border-[8px] lg:border-[12px] border-solid border-white">
           <span id="image-holder" className="flex items-center justify-center w-full h-full">
             <Image
-              src="/assets/images/eloge-removebg-preview 2eloge.png"
+              src="/assets/images/elogeimage.png"
               alt='home photo'
               width={300}
               height={450}
