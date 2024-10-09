@@ -34,7 +34,7 @@ const Projects = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className='w-full bg-home-service p-4 sm:p-8 md:px-16 min-h-screen'>
+    <section ref={sectionRef} className='w-full bg-home-service p-4 sm:p-8 md:px-16 min-h-screen' id='projects'>
       <h1 className='font-khand text-5xl text-white mb-1 animate'>Design Samples</h1>
       <hr className="flex justify-start w-[250px] border-t-4 border-home-yellow mt-0 mb-6 mx-auto lg:mx-0 sm:left-2 animate" />
       

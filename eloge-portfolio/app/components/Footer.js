@@ -102,6 +102,7 @@ const Footer = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
+      id="footer"
     >
       <motion.h1 variants={itemVariants} className="mx-8 md:mx-16">
         Contact me

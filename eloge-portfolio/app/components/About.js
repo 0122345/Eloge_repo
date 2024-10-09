@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+ 
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -38,7 +39,7 @@ const About = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden h-[90dvh]">
+    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden h-[90dvh]" id="about">
       <div className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0 animate">
         <div className="hidden lg:flex w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>
@@ -79,7 +80,7 @@ const About = () => {
           </p> 
          </div>
         <div className="flex flex-col sm:flex-row   pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
-            <Link href="/project"><span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
+            <Link href="#projects"><span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
               Hire Me
             </span>
             </Link>

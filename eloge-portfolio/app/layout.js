@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 import 'lazysizes';
 import 'lazysizes/plugins/attrchange/ls.attrchange';
 import { useEffect, useState } from 'react';
+import Nav from './components/Nav';
+ 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -49,6 +51,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className && 'overflow-x-hidden'}>
         {loading && <Loader />}
+         <Nav />
         {children}
       </body>
     </html>
