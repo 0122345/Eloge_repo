@@ -57,10 +57,12 @@ const Projects = () => {
             {selectedImages.map((image, index) => (
               <div key={index} className="relative h-40 sm:h-44 w-full animate" style={{transitionDelay: `${index * 100}ms`}}>
                 <Image
+                  data-sizes="auto"
                   src={image.img}
                   alt={image.title}
                   fill
                   objectFit="cover"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -79,10 +81,12 @@ const Projects = () => {
           <div key={item.id || index} className='w-full sm:w-[48%] lg:w-[30%] mb-4 hover animate' style={{transitionDelay: `${index * 100}ms`}}>
             <div className='relative h-64 sm:h-72 hover:bg-home-yellow overflow-hidden shadow-md'>
               <Image
+                data-sizes="auto"
                 src={item.img || item.image} 
                 alt={item.alt || item.title || 'Project image'} 
                 fill
                 objectFit="cover"
+                loading='lazy'
               />
             </div>
           </div>

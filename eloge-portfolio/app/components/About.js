@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -37,11 +38,11 @@ const About = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden h-full">
+    <div ref={sectionRef} className="w-full bg-home-service font-khand p-2 lg:p-4 flex flex-col lg:flex-row overflow-x-hidden h-[90dvh]">
       <div className="relative flex justify-center lg:justify-start lg:ml-[8vw] lg:mt-[10vh] mb-8 lg:mb-0 animate">
         <div className="hidden lg:flex w-[200px] lg:w-[250px] border-[10px] border-solid border-home-yellow h-[270px] lg:h-[320px]">
         </div>
-        <div id="image-potrait" className="hidden lg:flex absolute top-[-10px] lg:top-[-20px] left-[10px] lg:left-[20px] w-[200px] lg:w-[250px] z-10 h-[270px] lg:h-[320px] bg-home-yellow border-[8px] lg:border-[12px] border-solid border-white">
+        <div id="image-potrait" className="hidden lg:flex absolute top-[10px] lg:top-[-20px] left-[10px] lg:left-[20px] w-[200px] lg:w-[250px] z-10 h-[270px] lg:h-[320px] bg-home-yellow border-[8px] lg:border-[12px] border-solid border-white">
           <span id="image-holder" className="flex items-center justify-center w-full h-full">
             <Image
               src="/assets/images/elogeimage.png"
@@ -61,26 +62,27 @@ const About = () => {
               variants={itemVariants} 
               className="w-24 lg:w-32 border-t-3 border-home-yellow my-2 lg:my-4 animate" 
             />
-            <div className="flex my-5">
+            <div className="flex space-x-3 lg:font-medium font-light">
             
-            <p className="text-xl lg:text-3xl  text-white w-full lg:max-w-[400px] pb-4 lg:pb-8 animate">
+            <p className="text-lg  lg:text-2xl  text-white w-full lg:max-w-[400px]  animate">
               A passionate designer with a love for crafting
               meaningful and visually stunning experiences.
               With a background, e.g. graphic design, digital
               Design etc , I thrive on bringing creativity to
               life through thoughtful design solutions.
           </p>
-          <p className="text-xl lg:text-2xl text-white w-full  lg:max-w-[450px] animate">
+          <p className="text-lg lg:text-2xl text-white w-full  lg:max-w-[450px] animate">
             Whether it's creating captivating visuals or
             designing different user experiences, I'm dedicated
             to exceeding expectations and making a lasting impact.
             Let's collaborate and bring your vision to life.
           </p> 
          </div>
-        <div className="flex flex-col sm:flex-row my-12 lg:my-24 pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
-            <span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
+        <div className="flex flex-col sm:flex-row   pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
+            <Link href="/project"><span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
               Hire Me
             </span>
+            </Link>
             <span className='border border-home-yellow border-solid rounded-sm w-full sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray'>
               Discover All
             </span>
