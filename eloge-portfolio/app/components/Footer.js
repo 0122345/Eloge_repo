@@ -98,11 +98,12 @@ const Footer = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className="w-full min-h-screen font-khand text-5xl text-white bg-home-gray "
+      className="w-full min-h-screen font-khand text-5xl pb-4 text-white bg-home-gray "
       initial="hidden"
       animate="visible"
       variants={containerVariants}
       id="footer"
+
     >
       <motion.h1 variants={itemVariants} className="mx-8 md:mx-16">
         Contact me

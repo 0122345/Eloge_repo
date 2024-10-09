@@ -33,12 +33,12 @@ function Nav({ isHomePage }) {
           <BsThreeDots className="text-8xl cursor-pointer" />
         </div>
         {isOpen && (
-          <nav className="absolute z-20 flex flex-col items-start text-lg shadow-lg mt-2 rounded-bl-md rounded-tr-md bg-blur w-[250px] font-semibold text-home-yellow transition-all duration-300 ease-in-out transform">
+          <nav className="absolute z-20 flex flex-col items-start text-lg shadow-lg mt-2 rounded-bl-md rounded-tr-md bg-blur w-[250px] h-[224px] font-semibold text-white transition-all duration-300 ease-in-out transform">
             <div className="flex justify-between w-full p-2">
-              <span className="text-xl">Navigate with Us</span>
+              <span className="text-xl">.Eloge</span>
               <BsX className="text-2xl cursor-pointer" onClick={toggleMenu} />
             </div>
-            <ul className="pl-4 space-y-6">
+            <ul className="pl-4 space-y-2">
               <li>
                 <a href="/" onClick={() => setIsOpen(false)}>Home</a>
               </li>

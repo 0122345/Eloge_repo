@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { frames } from "@/public/utils";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const sectionRef = useRef(null);
@@ -22,14 +23,26 @@ const Services = () => {
     return () => observer.disconnect();
   }, []);
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.5 }
+    },
+  };
+
   return (
     <section
       ref={sectionRef}
       className="w-full h-full bg-home-gray font-khand lg:p-8 md:px-16 flex flex-col"
       id="services"
     >
-      <h1 className="text-5xl text-white animate px-3">Services</h1>
-      <hr className="w-24 h-2 lg:w-36 border-t-4 pl-2 border-home-yellow my-3 lg:my-5 animate" />
+     <h1 className="pl-4 text-xl lg:text-3xl text-white font-semibold animate">Services</h1>
+            <motion.hr 
+              variants={itemVariants} 
+              className="pl-4 w-[80px]  border-t-3 border-home-yellow m-4 lg:my-4 animate" 
+            />
       <p className="mt-8 text-lg lg:text-2xl lg:font-semibold text-white animate h-full px-3">
         I offer a range of design services tailored to meet your needs and
         elevate your brand. These include graphic design for logos, branding,
@@ -56,7 +69,7 @@ const Services = () => {
               </div>
               <div className="absolute inset-0 bg-blur-service" />
               <span className="relative z-10 text-center">
-                <h1 className="text-3xl text-home-yellow font-bold animate">
+                <h1 className="text-3xl text-white font-bold animate">
                   {item.title}
                 </h1>
               </span>

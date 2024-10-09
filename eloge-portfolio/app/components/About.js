@@ -80,13 +80,16 @@ const About = () => {
           </p> 
          </div>
         <div className="flex flex-col sm:flex-row   pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
-            <Link href="#projects"><span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
+            <Link href="#services"><span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
               Hire Me
             </span>
             </Link>
+            <Link href="#projects">
             <span className='border border-home-yellow border-solid rounded-sm w-full sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray'>
               Discover All
             </span>
+            </Link>
+            
           </div>
       </div>
     </div>
