@@ -26,8 +26,8 @@ export default function HomePage() {
     <main className='font-khand w-full overflow-hidden' ref={sectionRef}>
       <div className="bg-gradient-to-t from-home-yellow from-50% to-home-gray to-50% w-full min-h-screen lg:h-screen lg:bg-gradient-to-r lg:from-home-gray lg:from-50% lg:to-home-yellow lg:to-50%">
         <div className="flex flex-col lg:flex-row">
-          <div id="left" className="flex flex-col text-white lg:justify-start  w-full lg:w-1/2 p-6 lg:p-20">
-            <span className="space-y-2 lg:my-32 justify-center items-center">
+          <div id="left" className="flex flex-col text-white lg:justify-start  w-full lg:w-1/2 p-10 lg:p-20">
+            <span className="space-y-2 lg:my-32 lg:pt-0 pt-7 justify-center items-center">
               <p className="text-3xl lg:text-4xl font-light animate">
                 Hello
               </p>
@@ -43,13 +43,13 @@ export default function HomePage() {
               </p>
             </span>
             <span 
-              className='lg:bottom-20 bottom-[-40px] relative border border-home-yellow border-solid rounded-md w-32 sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-semibold text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray animate'
+              className='lg:bottom-20 bottom-[-60px] relative border border-home-yellow border-solid rounded-md lg:w-32 w-full sm:w-44 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-semibold text-home-yellow cursor-pointer hover:bg-home-yellow hover:text-home-gray animate'
               onMouseEnter={() => setShowTooltip(true)}
               onMouseLeave={() => setShowTooltip(false)}
             >
               Hire Me
               {showTooltip && (
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-2 bg-white text-home-gray rounded-md shadow-lg text-sm tooltip-animation w-full">
+                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-2 bg-white text-home-gray rounded-md shadow-lg text-sm tooltip-animation w-[220px]">
                   <p>📧 elogechris4@gmail.com or elogechris3@gmail.com</p>
                 </div>
               )}

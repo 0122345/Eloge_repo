@@ -70,32 +70,32 @@ export const frames = [
     {
         title: 'App Design',
         description: 'This is a frame 1 description.',
-        img:'/projects/Frame 8frame3.png'
+        img:'/assets/images/appdesign.jpeg'
     },
     {
         title: 'Branding',
         description: 'This is a frame 1 description.',
-        img:'/projects/Frame 9frame2.png'
+        img:'/assets/images/branding.jpeg'
     },
     {
         title: 'Logo Design',
         description: 'This is a frame 1 description.',
-        img:'/projects/Frame 10frame1.png'
-    },
-    {
-        title: 'UI/UX Design',
-        description: 'This is a frame 1 description.',
-        img:'/projects/Frame 11frame5.png'
+        img:'/assets/images/logodesign.jpeg'
     },
     {
         title: 'Web Design',
         description: 'This is a frame 1 description.',
-        img:'/projects/Frame 9frame4.png'
+        img:'/assets/images/webdesign.jpeg'
     },
     {
         title: 'System Design',
         description: 'This is a frame 1 description.',
-        img:'/projects/Frame 12frame6.png'
+        img:'/assets/images/system design.jpeg'
+    },
+    {
+        title: 'Content creator',
+        description: 'This is a frame 1 description.',
+        img:'/projects/content creation.jpg'
     }
 ]
 

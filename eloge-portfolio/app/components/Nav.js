@@ -24,7 +24,7 @@ function Nav({ isHomePage }) {
 
   return (
     <>
-      {/* Small view: Hamburger menu */}
+      
       <main className="lg:hidden flex flex-col items-end top-3 right-14 absolute">
         <div
           className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}
