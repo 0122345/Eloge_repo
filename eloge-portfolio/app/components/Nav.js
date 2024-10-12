@@ -33,9 +33,9 @@ function Nav({ isHomePage }) {
           <BsThreeDots className="text-8xl cursor-pointer" />
         </div>
         {isOpen && (
-          <nav className="absolute z-20 flex flex-col items-start text-lg shadow-lg mt-2 rounded-bl-md rounded-tr-md bg-blur w-[250px] h-[224px] font-semibold text-white transition-all duration-300 ease-in-out transform">
-            <div className="flex justify-between w-full p-2">
-              <span className="text-xl">.Eloge</span>
+          <nav className="absolute top-10  z-10 flex flex-col hover:cursor-pointer items-start text-lg shadow-lg  rounded-bl-md rounded-tr-md bg-blur w-[250px] h-[224px] font-semibold text-white transition-all duration-300 ease-in-out transform">
+            <div className="flex justify-end w-full p-2">
+               
               <BsX className="text-2xl cursor-pointer" onClick={toggleMenu} />
             </div>
             <ul className="pl-4 space-y-2">

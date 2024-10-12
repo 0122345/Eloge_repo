@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react';
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function HomePage() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -26,8 +26,8 @@ export default function HomePage() {
     <main className='font-khand w-full overflow-hidden' ref={sectionRef}>
       <div className="bg-gradient-to-t from-home-yellow from-50% to-home-gray to-50% w-full min-h-screen lg:h-screen lg:bg-gradient-to-r lg:from-home-gray lg:from-50% lg:to-home-yellow lg:to-50%">
         <div className="flex flex-col lg:flex-row">
-          <div id="left" className="flex flex-col text-white lg:justify-start  w-full lg:w-1/2 p-10 lg:p-20">
-            <span className="space-y-2 lg:my-32 lg:pt-0 pt-7 justify-center items-center">
+          <div id="left" className="flex flex-col text-white lg:justify-start  w-full lg:w-1/2 p-10">
+            <span className="space-y-2 lg:my-32 lg:pt-7 justify-center items-center">
               <p className="text-3xl lg:text-4xl font-light animate">
                 Hello
               </p>
@@ -55,7 +55,7 @@ export default function HomePage() {
               )}
             </span>
           </div>
-          <div id='center' className='relative w-full lg:w-1/2 mt-8 lg:mt-0 animate'>
+          <div id='center' className='relative w-full lg:w-1/2 mt-2 lg:mt-0 animate'>
             <Image
               src="/assets/images/elogeimage.png"
               alt='home photo'
@@ -64,7 +64,7 @@ export default function HomePage() {
               layout="responsive"
               objectFit="contain"
               priority 
-              className="lazyload mx-auto lg:absolute lg:top-[-85px] lg:right-[145px]"
+              className="lazyload mx-auto lg:absolute lg:top-[-85px] lg:right-[145px] z-20"
             />
           </div>
         </div>

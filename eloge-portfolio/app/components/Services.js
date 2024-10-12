@@ -38,11 +38,11 @@ const Services = () => {
       className="w-full h-full bg-home-gray font-khand lg:p-8 md:px-16 flex flex-col"
       id="services"
     >
-     <h1 className="pl-4 text-xl lg:text-3xl text-white font-semibold animate">Services</h1>
-            <motion.hr 
-              variants={itemVariants} 
-              className="pl-4 w-[80px]  border-t-3 border-home-yellow m-4 lg:my-4 animate" 
-            />
+      <h1 className="pl-4 pt-10 text-xl lg:text-3xl text-white font-semibold animate">Services</h1>
+      <motion.hr 
+        variants={itemVariants} 
+        className="pl-4 w-[80px] border-t-3 border-home-yellow m-4 lg:my-4 animate" 
+      />
       <p className="mt-8 text-lg lg:text-2xl lg:font-semibold text-white animate h-full px-3">
         I offer a range of design services tailored to meet your needs and
         elevate your brand. These include graphic design for logos, branding,
@@ -53,26 +53,25 @@ const Services = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4 h-full">
         {frames?.map((item, i) => (
           <div
-            key={item.alt || `service-${i}`}
+            key={item.title || `service-${i}`}
             className="w-full animate"
             style={{ transitionDelay: `${i * 100}ms` }}
           >
-            <div className="relative h-72 rounded-none overflow-hidden shadow-md p-8 flex items-center justify-center">
-              <div className="absolute inset-0">
-                <Image
-                  src={item.img}
-                  alt={item.alt || `Service ${i + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="absolute inset-0 bg-blur-service" />
-              <span className="relative z-10 text-center">
-                <h1 className="text-3xl text-white font-bold animate">
+            <div className="relative h-72 rounded-none overflow-hidden shadow-md">
+              <Image
+                src={item.img}
+                alt={item.title || `Service ${i + 1}`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                style={{ objectFit: "cover" }}
+                priority={i < 3}
+              />
+              <div className="absolute inset-0 bg-blur-service hover:bg-hovering-blur" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h2 className="text-3xl text-white font-bold text-center">
                   {item.title}
-                </h1>
-              </span>
+                </h2>
+              </div>
             </div>
           </div>
         ))}

@@ -105,7 +105,7 @@ const Footer = () => {
       id="footer"
 
     >
-      <motion.h1 variants={itemVariants} className="mx-8 md:mx-16">
+      <motion.h1 variants={itemVariants} className="pt-10 mx-8 md:mx-16">
         Contact me
       </motion.h1>
       <hr className="w-[180px] lg:w-[200px] border-t-4 border-home-yellow lg:mx-14 mx-11 animate" />
@@ -125,7 +125,7 @@ const Footer = () => {
                   <Image
                     src={item.logo}
                     alt={item.title}
-                    className="object-contain"
+                    style={{ objectFit: "contain" }}
                     fill
                   />
                 </div>
