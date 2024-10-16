@@ -104,10 +104,11 @@ const Footer = () => {
       variants={containerVariants}
       id="footer"
     >
-      <motion.h1 variants={itemVariants} className="pt-10 mx-8 md:mx-16">
+      <motion.h1 variants={itemVariants} className="pt-10 mx-8 md:mx-16 text-xl lg:text-3xl text-white font-semibold">
         Contact me
       </motion.h1>
-      <hr className="w-[180px] lg:w-[200px] border-t-4 border-home-yellow lg:mx-14 mx-11 animate" />
+      <hr className="ml-8 lg:ml-20 w-[98px] lg:w-[100px] border-t-3 border-home-yellow m-4 lg:my-2" />
+
       <div className="flex flex-col md:flex-row px-8 md:px-16 py-16">
         <motion.div
           className="flex flex-wrap flex-col gap-8 w-full md:w-1/2 p-8"

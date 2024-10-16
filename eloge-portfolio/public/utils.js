@@ -140,8 +140,7 @@ export const imageRenderings = [
         name: 'App Design',
         images :  [
             { title: 'App 1',img: 'projects/app1.jpg' },
-            { title: 'App 2',img: 'projects/app2.jpg' },
-            { title: 'App 3',img: 'projects/app3.jpg' },
+            { title: 'App 2',img: 'projects/app2.jpg' },        
             { title: 'App 4',img: 'projects/app 4.png' },
             { title: 'App 5',img: 'projects/app9.jpg' },
             { title: 'App 3',img: 'projects/app3.jpg' }

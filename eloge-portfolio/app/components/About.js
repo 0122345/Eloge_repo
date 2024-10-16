@@ -57,11 +57,11 @@ const About = () => {
           </span>
         </div>
       </div>
-        <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] mt-8">
+        <div className="w-full lg:w-[60%] flex flex-col lg:ml-[10vw] lg:mt-8  space-y-4">
           <h1 className="text-xl lg:text-2xl text-white font-semibold animate">About Me</h1>
             <motion.hr 
               variants={itemVariants} 
-              className="w-24 lg:w-32 border-t-3 border-home-yellow my-2 lg:my-4 animate" 
+              className="w-24 lg:w-32 border-t-3 border-home-yellow my-2 lg:my-4 animate pb-4" 
             />
             <div className="flex space-x-3 lg:font-medium font-light">
             
@@ -79,7 +79,7 @@ const About = () => {
             Let's collaborate and bring your vision to life.
           </p> 
          </div>
-        <div className="flex flex-col sm:flex-row   pt-3 lg:pt-16 space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
+        <div className="flex flex-col sm:flex-row   pt-11 lg:pt-16 space-y-6 sm:space-y-0 sm:space-x-4 lg:space-x-11 animate">
             <Link href="#services"><span className='border border-home-yellow border-solid rounded-sm w-full sm:w-36 h-11 shadow-inner shadow-[#383636] flex items-center justify-center text-xl lg:text-2xl font-medium hover:bg-home-gray hover:text-home-yellow cursor-pointer bg-home-yellow text-white'>
               Hire Me
             </span>

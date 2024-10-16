@@ -30,7 +30,7 @@ function Nav({ isHomePage }) {
           className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}
           onClick={toggleMenu}
         >
-          <BsThreeDots className="text-8xl cursor-pointer" />
+          <BsThreeDots className="text-6xl cursor-pointer" />
         </div>
         {isOpen && (
           <nav className="absolute top-10  z-10 flex flex-col hover:cursor-pointer items-start text-lg shadow-lg  rounded-bl-md rounded-tr-md bg-blur w-[250px] h-[224px] font-semibold text-white transition-all duration-300 ease-in-out transform">

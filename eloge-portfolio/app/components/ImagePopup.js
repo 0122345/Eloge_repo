@@ -18,16 +18,16 @@ const ImagePopup = ({ isOpen, onClose, images }) => {
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0.9 }}
-            className="bg-white p-6 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
+            className="bg-black p-6 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={onClose}
-              className="absolute top-2 right-2 text-2xl font-bold text-gray-600 hover:text-gray-800"
+              className="absolute top-2 right-2 text-4xl font-bold text-gray-600 hover:text-gray-300"
             >
               ×
             </button>
-            <h2 className="text-2xl font-bold mb-4">Image Gallery</h2>
+            <h2 className="text-2xl font-bold mb-4 text-white">Image Gallery</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {images.map((image, index) => (
                 <div key={index} className="relative h-48 border-4 border-home-yellow rounded-lg overflow-hidden">
