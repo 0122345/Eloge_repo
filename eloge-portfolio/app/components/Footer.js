@@ -98,12 +98,11 @@ const Footer = () => {
   return (
     <motion.div
       ref={sectionRef}
-      className="w-full min-h-screen font-khand text-5xl pb-4 text-white bg-home-gray "
+      className="w-full min-h-screen font-khand text-5xl pb-4 text-white bg-home-gray sm:text-4xl sm:pb-2"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
       id="footer"
-
     >
       <motion.h1 variants={itemVariants} className="pt-10 mx-8 md:mx-16">
         Contact me
@@ -117,11 +116,11 @@ const Footer = () => {
           {footerDetails.map((item, i) => (
             <motion.div
               key={i}
-              className="flex gap-4 items-center w-fit lg:text-2xl text-xl"
+              className="flex gap-4 items-center w-fit lg:text-2xl text-xl sm:text-lg"
               variants={itemVariants}
             >
-              <div className="size-14 relative rounded-full bg-home-yellow flex items-center justify-center">
-                <div className="size-6 relative">
+              <div className="size-14 relative rounded-full bg-home-yellow flex items-center justify-center sm:size-10">
+    <div className="size-6 relative sm:size-4">
                   <Image
                     src={item.logo}
                     alt={item.title}
@@ -162,7 +161,7 @@ const Footer = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="outline w-full p-2 bg-transparent h-fit text-2xl placeholder:font-light placeholder:text-md outline-home-yellow rounded-md"
+                  className="outline w-full p-2 bg-transparent h-fit text-2xl placeholder:font-light placeholder:text-md outline-home-yellow rounded-md sm:text-lg sm:p-1"
                   placeholder="Your name..."
                   variants={inputVariants}
                   animate={errors.name ? "invalid" : "valid"}
@@ -211,7 +210,7 @@ const Footer = () => {
                 name="feedback"
                 value={formData.feedback}
                 onChange={handleChange}
-                className="outline w-full p-2 placeholder:font-light placeholder:text-md bg-transparent min-h-56 text-2xl outline-home-yellow rounded-md"
+                className="outline w-full p-2 placeholder:font-light placeholder:text-md bg-transparent min-h-56 text-2xl outline-home-yellow rounded-md  sm:min-h-40 sm:text-lg sm:p-1"
                 placeholder="Your feedback..."
                 variants={inputVariants}
                 animate={errors.feedback ? "invalid" : "valid"}
@@ -228,7 +227,7 @@ const Footer = () => {
             <motion.button
               variants={itemVariants}
               type="submit"
-              className="py-1 bg-home-yellow rounded-md text-lg w-full lg:w-[200px] hover:bg-home-gray hover:border hover:border-solid hover:border-home-yellow h-[50px]"
+              className="py-1 bg-home-yellow rounded-md text-lg w-full lg:w-[200px] hover:bg-home-gray hover:border hover:border-solid hover:border-home-yellow h-[50px] sm:h-[40px] sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               disabled={isSubmitting}
@@ -240,7 +239,7 @@ const Footer = () => {
       </div>
       <motion.div
         variants={itemVariants}
-        className="w-full py-8 bg-home-yellow text-center text-xl"
+        className="w-full py-11 bg-home-yellow text-center text-xl"
       >
         <p behavior="scroll" direction="right">
           Copyright 2024. All rights reserved

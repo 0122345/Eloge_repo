@@ -1,10 +1,14 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { frames } from "@/public/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ImagePopup from "./ImagePopup";
+import { imageRend } from "@/public/utils";  
 
 const Services = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +36,21 @@ const Services = () => {
     },
   };
 
+  const handleImageClick = (title) => {
+    const category = imageRend.find(cat => 
+      cat.name.toLowerCase().includes(title.toLowerCase()) ||
+      title.toLowerCase().includes(cat.name.toLowerCase())
+    );
+    //this was testing
+    if (category) {
+      setSelectedImages(category.images);
+      setIsPopupOpen(true);}
+      //console.log("Popup should open with images:", category.images);
+    // } else {
+    //   console.log("No matching category found for:", title);
+    // }
+  };
+  
   return (
     <section
       ref={sectionRef}
@@ -52,10 +71,12 @@ const Services = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4 h-full">
         {frames?.map((item, i) => (
-          <div
+          <motion.div
             key={item.title || `service-${i}`}
-            className="w-full animate"
+            className="w-full animate cursor-pointer"
             style={{ transitionDelay: `${i * 100}ms` }}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => handleImageClick(item.title)}
           >
             <div className="relative h-72 rounded-none overflow-hidden shadow-md">
               <Image
@@ -66,16 +87,22 @@ const Services = () => {
                 style={{ objectFit: "cover" }}
                 priority={i < 3}
               />
-              <div className="absolute inset-0 bg-blur-service hover:bg-hovering-blur" />
+              <div className="absolute inset-0 bg-blur-service hover:bg-hovering-blur transition-all duration-300" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <h2 className="text-3xl text-white font-bold text-center">
                   {item.title}
                 </h2>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
+
+      <ImagePopup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        images={selectedImages}
+      />
     </section>
   );
 };

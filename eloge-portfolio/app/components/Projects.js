@@ -32,7 +32,7 @@ const Projects = () => {
               setCurrentPage(1);
             }}
             key={category.id}
-            className={`p-1 text-lg w-[136px] lg:h-11 h-20 flex justify-center items-center rounded-md font-khand text-home-yellow border-2 border-solid border-home-yellow ${selectedCategory === category.name ? 'bg-home-yellow text-black' : ''}`}
+            className={`p-1 text-lg w-[136px] lg:h-11 h-20 flex justify-center items-center rounded-md font-khand text-home-yellow border-2 border-solid border-home-yellow ${selectedCategory === category.name ? 'bg-home-yellow text-white' : ''}`}
           >
             {category.name}
           </button>
