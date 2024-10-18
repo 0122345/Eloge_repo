@@ -30,7 +30,7 @@ const ImagePopup = ({ isOpen, onClose, images }) => {
             <h2 className="text-2xl font-bold mb-4 text-white">Image Gallery</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {images.map((image, index) => (
-                <div key={index} className="relative h-48 border-4 border-home-yellow rounded-lg overflow-hidden">
+                <div key={index} className="relative h-48 border-2 border-white rounded-md overflow-hidden">
                   <Image
                     src={image.img}
                     alt={image.title}
