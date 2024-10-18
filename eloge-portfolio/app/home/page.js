@@ -55,8 +55,8 @@ export default function HomePage() {
               )}
             </span>
           </div>
-                <div id='center' className='relative w-full lg:w-1/2 mt-2 lg:mt-0 animate lg:flex lg:justify-center lg:items-center lg:h-screen'>
-                  <div className="lg:absolute lg:inset-0 lg:flex lg:justify-center lg:items-center">
+                <div id='center' className='relative w-full lg:w-1/2  lg:mt-0 animate lg:flex lg:justify-center lg:items-center lg:h-screen h-[120dvh]'>
+                  <div className="lg:absolute lg:inset-0 lg:flex lg:justify-center lg:items-center lg:bottom-0 bottom-[-30px] absolute">
                     <Image
                       src="/assets/images/elogeimage.png"
                       alt='home photo'
@@ -65,7 +65,7 @@ export default function HomePage() {
                       layout="intrinsic"
                       objectFit="contain"
                       priority 
-                      className="lazyload mx-auto lg:max-w-[90%] lg:h-auto"
+                      className="lazyload mx-auto lg:max-w-[90%] lg:h-auto z-20 "
                     />
                   </div>
                 </div>
